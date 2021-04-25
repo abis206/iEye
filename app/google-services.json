@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "771506115586",
+    "firebase_url": "https://saucey-5af33-default-rtdb.firebaseio.com",
+    "project_id": "saucey-5af33",
+    "storage_bucket": "saucey-5af33.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771506115586:android:b866d21756760dc4cdc31b",
+        "android_client_info": {
+          "package_name": "com.example.saucey"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "771506115586-n1h7af4mrhqgtgad4g4rr68bp6p261jo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnEWb97FYC-r2PxH0-5m_J7gwnVTn9q7I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "771506115586-n1h7af4mrhqgtgad4g4rr68bp6p261jo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
