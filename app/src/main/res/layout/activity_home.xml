@@ -231,7 +231,7 @@
                     android:layout_width="213dp"
                     android:layout_height="171dp"
                     android:contentDescription="@null"
-                    app:srcCompat="@drawable/eyeArt" />
+                    app:srcCompat="@drawable/eye" />
 
                 <LinearLayout
                     android:layout_width="143dp"
@@ -281,7 +281,7 @@
                     android:layout_height="239dp"
                     android:layout_marginStart="23dp"
                     android:layout_marginEnd="22dp"
-                    android:background="@drawable/eyeArt"
+                    android:background="@drawable/eye"
                     android:gravity="center_horizontal"
                     android:orientation="vertical"
                     android:layout_marginLeft="23dp"
@@ -293,7 +293,7 @@
                         android:layout_centerHorizontal="true"
                         android:contentDescription="@null"
                         android:visibility="gone"
-                        app:srcCompat="@drawable/eyeArt" />
+                        app:srcCompat="@drawable/eye" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -317,7 +317,7 @@
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="19dp"
                     android:layout_marginEnd="22dp"
-                    android:background="@drawable/eyeArt"
+                    android:background="@drawable/eye"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:layout_marginRight="22dp"
@@ -329,7 +329,7 @@
                         android:layout_centerHorizontal="true"
                         android:contentDescription="@null"
                         android:visibility="gone"
-                        app:srcCompat="@drawable/eyeArt" />
+                        app:srcCompat="@drawable/eye" />
 
                     <TextView
                         android:layout_width="match_parent"
