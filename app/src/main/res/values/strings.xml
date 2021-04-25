@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Saucey</string>
+    <string name="hello_comma">Hello,</string>
+    <string name="scan">Scan</string>
+    <string name="viewResults">View Results</string>
+    <string name="userName">User</string>
+    <string name="clinic">Clinic</string>
 </resources>
