@@ -49,7 +49,7 @@
                     android:layout_width="213dp"
                     android:layout_height="171dp"
                     android:contentDescription="@null"
-                    app:srcCompat="@drawable/eyeArt" />
+                    app:srcCompat="@drawable/eye" />
 
                 <LinearLayout
                     android:layout_width="143dp"
@@ -124,7 +124,7 @@
                 android:layout_marginEnd="50dp"
                 android:layout_marginRight="50dp"
                 android:layout_weight="0.5"
-                android:background="@drawable/eyeArt"
+                android:background="@drawable/eye"
                 android:gravity="center"
                 android:orientation="vertical">
 
