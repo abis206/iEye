@@ -4,4 +4,7 @@
     <color name="colorPrimaryDark">#ff7500</color>
     <color name="colorAccent">#D81B60</color>
     <color name="splashColor">#ffffff</color>
+    <color name="blue">#00dbde</color>
+    <color name="purple">#fc00ff</color>
+    <color name="darkerblue">#0080FF</color>
 </resources>
