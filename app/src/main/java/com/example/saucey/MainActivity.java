@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                   startActivity(new Intent(MainActivity.this,Profile.class));
+                   startActivity(new Intent(MainActivity.this,HomeScreen.class));
                     Toast.makeText(MainActivity.this, "Success", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.INVISIBLE);
                 }else{

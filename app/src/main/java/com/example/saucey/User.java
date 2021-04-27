@@ -2,22 +2,23 @@ package com.example.saucey;
 
 import android.widget.ImageView;
 
+import java.util.ArrayList;
+
 public class User {
-    public String fullname, email, bio, username,location,fire;
-    public ImageView profilePic;
+    public String fullname, email, gender,location,age;
+    public ArrayList<String> contactList;
 
     public User(){
 
     }
 
-    public User(String fullname, String email, String bio, String username, String location, String fire, ImageView profilePic){
+    public User(String fullname, String email, String gender, String location, String age, ArrayList<String> contactList){
         this.fullname = fullname;
         this.email = email;
-        this.bio = bio;
-        this.username = username;
+        this.gender = gender;
         this.location = location;
-        this.fire = fire;
-        this.profilePic = profilePic;
+        this.age = age;
+        this.contactList = contactList;
     }
 
 }

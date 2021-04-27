@@ -26,16 +26,13 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="153dp"
-        android:layout_height="158dp"
-        android:layout_marginEnd="120dp"
-        android:layout_marginRight="120dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="319dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/topView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/topView"
-        app:srcCompat="@drawable/ic_fire" />
+        app:srcCompat="@drawable/ieyelogo" />
 
     <EditText
         android:id="@+id/Location"
@@ -171,7 +168,7 @@
         android:layout_marginRight="32dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:text="New? Join the Sauce"
+        android:text="New? Sign Up Today"
         android:textColor="@color/colorPrimary"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -179,7 +176,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:text="New? Join the Sauce" />
+        tools:text="New?  Sign Up Today" />
 
     <ProgressBar
         android:id="@+id/progressBar3"

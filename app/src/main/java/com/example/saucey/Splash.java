@@ -30,13 +30,13 @@ public class Splash extends AwesomeSplash {
         configSplash.setRevealFlagX(Flags.REVEAL_LEFT);
         configSplash.setRevealFlagX(Flags.REVEAL_BOTTOM);
 
-        configSplash.setLogoSplash(R.drawable.ic_fire);
+        configSplash.setLogoSplash(R.drawable.splash);
         configSplash.setAnimLogoSplashDuration(200);
 
-        configSplash.setTitleSplash("SAUCEY");
+        configSplash.setTitleSplash("iEYE");
         configSplash.setTitleTextColor(R.color.splashColor);
         configSplash.setTitleTextSize(50f);
-       // configSplash.setTitleFont("Fonts/redhatdisplaybold.ttf");
+        //configSplash.setTitleFont("Fonts/redhatdisplaybold.ttf");
         configSplash.setAnimTitleDuration(200);
         configSplash.setAnimTitleTechnique(Techniques.FadeIn);
     }

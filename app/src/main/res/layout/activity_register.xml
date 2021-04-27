@@ -24,6 +24,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topView" />
 
+
     <EditText
         android:id="@+id/Location"
         android:layout_width="0dp"
@@ -32,7 +33,7 @@
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/round_border"
         android:drawableLeft="@drawable/ic_email_black_24dp"
         android:drawablePadding="16dp"
@@ -42,6 +43,7 @@
         android:inputType="text"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view2" />
 
@@ -55,14 +57,15 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/round_border"
+        android:drawableLeft="@drawable/ic_lock"
         android:drawablePadding="16dp"
         android:drawableStart="@drawable/ic_lock"
-        android:drawableLeft="@drawable/ic_lock"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Location" />
 
@@ -102,7 +105,7 @@
         android:drawablePadding="16dp"
         android:drawableStart="@drawable/ic_username"
         android:ems="10"
-        android:hint="Username"
+        android:hint="Age"
         android:inputType="text"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -111,20 +114,42 @@
         app:layout_constraintTop_toBottomOf="@+id/fullName" />
 
     <EditText
-        android:id="@+id/Bio"
+        android:id="@+id/llocation"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/roundrectangle"
-        android:drawableLeft="@drawable/ic_bio"
+        android:background="@drawable/round_border"
+        android:drawableLeft="@drawable/ic_location_on_black_24dp"
         android:drawablePadding="16dp"
-        android:drawableStart="@drawable/ic_bio"
+        android:drawableStart="@drawable/ic_location_on_black_24dp"
         android:ems="10"
-        android:hint="Bio "
+        android:hint="Address"
+        android:inputType="text"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+    <EditText
+        android:id="@+id/gender"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/round_border"
+        android:drawableLeft="@drawable/ic_baseline_favorite_24"
+        android:drawablePadding="16dp"
+        android:drawableStart="@drawable/ic_baseline_favorite_24"
+        android:ems="10"
+        android:hint="Gender"
         android:inputType="text"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -140,7 +165,7 @@
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/round_bg"
         android:text="CONTINUE"
         android:textColor="#FFFFFF"
@@ -149,7 +174,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Bio" />
+        app:layout_constraintTop_toBottomOf="@+id/llocation" />
 
     <TextView
         android:id="@+id/textView2"

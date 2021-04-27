@@ -27,10 +27,12 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+
 public class Register extends AppCompatActivity implements View.OnClickListener{
     private FirebaseAuth mAuth;
     private TextView title,next;
-    private EditText editTextEmail,editTextpassword,editTextfullName,editTextUsername,editTextBio;
+    private EditText editTextEmail,editTextpassword,editTextfullName,editTextAge,editTextaddress,editTextGender;
     private ProgressBar progressBar;
 
     @Override
@@ -47,10 +49,10 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
 
         editTextEmail = (EditText) findViewById(R.id.Location);
         editTextpassword = (EditText) findViewById(R.id.password);
-        editTextUsername = (EditText) findViewById(R.id.Username);
+        editTextAge = (EditText) findViewById(R.id.Username);
         editTextfullName = (EditText) findViewById(R.id.fullName);
-        editTextBio = (EditText) findViewById(R.id.Bio);
-
+        editTextaddress = (EditText) findViewById(R.id.llocation);
+        editTextGender = (EditText) findViewById(R.id.gender);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
     }
 
@@ -68,13 +70,12 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
     private void RegisterUser() {
         final String email = editTextEmail.getText().toString().trim();
         String password = editTextpassword.getText().toString().trim();
-        final String username = editTextUsername.getText().toString().trim();
+        final String age = editTextAge.getText().toString().trim();
         final String fullName= editTextfullName.getText().toString();
-        final String bio = editTextBio.getText().toString().trim();
-        final String location = "N/A";
-        final String realniggastatus = "N/A";
-        final ImageView profilePic = (ImageView) findViewById(R.id.profile_image);
-
+        final String gender = editTextGender.getText().toString().trim();
+        final String address = editTextaddress.getText().toString().trim();
+        ArrayList<String> contactList = new ArrayList<String>();
+        contactList.add("test");
         //Lack of submission picks
         if(fullName.isEmpty()){
             editTextfullName.setError("Please Enter Your Full Name");
@@ -92,14 +93,19 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
             editTextpassword.requestFocus();
             return;
         }
-        if(username.isEmpty()){
-            editTextUsername.setError("Please Enter Your Username");
-            editTextUsername.requestFocus();
+        if(age.isEmpty()){
+            editTextAge.setError("Please Enter Your Username");
+            editTextAge.requestFocus();
             return;
         }
-        if(bio.isEmpty()){
-            editTextBio.setError("Please Enter Your Bio");
-            editTextBio.requestFocus();
+        if(address.isEmpty()){
+            editTextaddress.setError("Please Enter Your Bio");
+            editTextaddress.requestFocus();
+            return;
+        }
+        if(gender.isEmpty()){
+            editTextGender.setError("Please Enter Your Bio");
+            editTextGender.requestFocus();
             return;
         }
 
@@ -117,7 +123,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
             return;
         }
 
-        final User user = new User(fullName, email, bio, username,location,realniggastatus,profilePic);
+        final User user = new User(fullName, email, gender, address, age, contactList);
 
         FirebaseDatabase db = FirebaseDatabase.getInstance();
         final DatabaseReference root = db.getReference().child("Users");
@@ -134,7 +140,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
                             if(task.isSuccessful()) {
                                 progressBar.setVisibility(ViewStub.GONE);
                                 Toast.makeText(Register.this, "Data Saved", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(Register.this,Register2.class));
+                                startActivity(new Intent(Register.this,HomeScreen.class));
                             }
                             else{
                                 Toast.makeText(Register.this, "Failed to Register User :( ", Toast.LENGTH_SHORT).show();
