@@ -7,4 +7,7 @@
     <color name="blue">#00dbde</color>
     <color name="purple">#fc00ff</color>
     <color name="darkerblue">#0080FF</color>
+    <color name="darkwhite">#FAF9FE</color>
+    <color name="black">#000000</color>
+    <color name="red">#FB2727</color>
 </resources>

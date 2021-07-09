@@ -28,6 +28,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Register extends AppCompatActivity implements View.OnClickListener{
     private FirebaseAuth mAuth;
@@ -123,7 +125,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
             return;
         }
 
-        final User user = new User(fullName, email, gender, address, age, contactList);
+        final User user = new User(fullName, email, gender, address, age);
 
         FirebaseDatabase db = FirebaseDatabase.getInstance();
         final DatabaseReference root = db.getReference().child("Users");
@@ -148,6 +150,9 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
                             }
                         }
                     });
+                    Map<String,String> def = new HashMap<>();
+                    def.put("default","value");
+                    root.child(emaill[0]).child("EmailList").setValue(def);
                 }
                 else{
                     Toast.makeText(Register.this, "Error: " + task.getException(), Toast.LENGTH_SHORT).show();

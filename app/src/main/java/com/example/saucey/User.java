@@ -12,13 +12,12 @@ public class User {
 
     }
 
-    public User(String fullname, String email, String gender, String location, String age, ArrayList<String> contactList){
+    public User(String fullname, String email, String gender, String location, String age){
         this.fullname = fullname;
         this.email = email;
         this.gender = gender;
         this.location = location;
         this.age = age;
-        this.contactList = contactList;
     }
 
 }

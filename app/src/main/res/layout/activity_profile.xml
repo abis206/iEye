@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/bluebck"
     tools:context=".Profile">
 
     <RelativeLayout
@@ -21,7 +22,8 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/ic_default_profile"
-            android:layout_centerVertical="true"
+
+            android:layout_centerHorizontal="true"
             app:civ_border_width="2dp"
             app:civ_border_color="#FFFFFFFF" />
 
@@ -29,127 +31,45 @@
             android:id="@+id/Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/redhatdisplaybold"
-            android:text="Default Samson"
-            android:layout_toRightOf="@id/profile_image"
-            android:layout_centerVertical="true"
+            android:layout_below="@id/profile_image"
+            android:layout_centerHorizontal="true"
             android:layout_marginLeft="7dp"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/redhatdisplaybold"
             android:includeFontPadding="false"
             android:paddingTop="10dp"
+            android:text="Default Contact"
             android:textColor="#FFFFFF"
             android:textSize="25sp" />
 
-        <TextView
-            android:id="@+id/description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/redhatdisplaybold"
-            android:text="Follow Me"
-            android:textSize="17sp"
-            android:layout_below="@+id/Name"
-            android:layout_centerHorizontal="true"
-            android:includeFontPadding="false"
-            android:layout_marginLeft="10dp"
-            android:textColor="#FFFFFF"
-              />
-        </RelativeLayout>
+
+    </RelativeLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:layout_marginTop="-10dp">
+        android:layout_marginTop="-10dp"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="0dp"
+        <ImageView
+            android:id="@+id/emailListIcon"
+            android:layout_width="match_parent"
             android:layout_height="125dp"
-            android:layout_weight="1"
             android:layout_margin="10dp"
-            app:cardBackgroundColor="@color/colorPrimary"
-            android:elevation="10dp"
-            >
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="5dp">
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_centerHorizontal="true"
-                    app:srcCompat="@drawable/ic_sharp_emoji_objects_24"/>
-
-                <TextView
-                    android:id="@+id/leftTop_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:fontFamily="@font/redhatdisplaybold"
-                    android:includeFontPadding="false"
-                    android:text="IQ Score"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/leftBottom_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/leftTop_label"
-                    android:layout_centerInParent="true"
-                    android:fontFamily="@font/redhatdisplaybold"
-                    android:includeFontPadding="false"
-                    android:text="120"
-                    android:textColor="#FFFFFF"
-                    android:textSize="17sp" />
-
-            </RelativeLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="0dp"
-            android:layout_height="125dp"
             android:layout_weight="1"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="@color/colorPrimary"
             android:elevation="10dp"
-            >
+            app:srcCompat="@drawable/ic_baseline_notifications_active_24" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="5dp">
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_centerHorizontal="true"
-                    app:srcCompat="@drawable/ic_sharp_business_24"/>
-
-                <TextView
-                    android:id="@+id/rightTop_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:fontFamily="@font/redhatdisplaybold"
-                    android:includeFontPadding="false"
-                    android:text="Location"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/rightBottom_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/rightTop_label"
-                    android:layout_centerInParent="true"
-                    android:fontFamily="@font/redhatdisplaybold"
-                    android:includeFontPadding="false"
-                    android:text="Nowhere"
-                    android:textColor="#FFFFFF"
-                    android:textSize="17sp" />
-
-            </RelativeLayout>
-        </com.google.android.material.card.MaterialCardView>
+        <TextView
+            android:id="@+id/emailListText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/redhatdisplaybold"
+            android:text="Remove From Email List"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
@@ -207,8 +127,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/redhatdisplaybold"
-                    android:text="Password:"
-                    android:textColor="@color/colorPrimary"
+                    android:text="Email:"
+                    android:textColor="#FFFFFF"
                     android:textSize="18sp" />
 
                 <TextView
@@ -220,7 +140,22 @@
                     android:gravity="end"
                     android:text="Change"
                     android:textAlignment="viewEnd"
-                    android:textSize="16dp" />
+                    android:textColor="#00FFF7"
+                    android:textSize="16dp"
+                    tools:visibility="visible" />
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/editbox"
+                    android:fontFamily="@font/redhatdisplaybold"
+                    android:gravity="center_horizontal"
+                    android:hint="New Email"
+                    android:id="@+id/edit_email"
+                    android:textAlignment="center"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    tools:visibility="gone" />
 
             </LinearLayout>
 
@@ -230,7 +165,7 @@
                 android:layout_height="1dp"
                 android:layout_margin="10dp"
                 android:alpha="0.5"
-                android:background="#0090ff" />
+                android:background="#FFFFFF" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -247,8 +182,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/redhatdisplaybold"
-                    android:text="Password:"
-                    android:textColor="@color/colorPrimary"
+                    android:text="Address:"
+                    android:textColor="#FFFFFF"
                     android:textSize="18sp" />
 
                 <TextView
@@ -256,11 +191,27 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:textColor="#00FFF7"
                     android:fontFamily="@font/redhatdisplaybold"
                     android:gravity="end"
                     android:text="Change"
                     android:textAlignment="viewEnd"
-                    android:textSize="16dp" />
+                    android:textSize="16dp"
+                    android:visibility="visible"/>
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/editbox"
+                    android:fontFamily="@font/redhatdisplaybold"
+                    android:gravity="center_horizontal"
+                    android:hint="New Email"
+                    android:id="@+id/edit_address"
+                    android:textAlignment="center"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    tools:visibility="gone" />
+
 
             </LinearLayout>
 
@@ -270,7 +221,7 @@
                 android:layout_height="1dp"
                 android:layout_margin="10dp"
                 android:alpha="0.5"
-                android:background="#0090ff" />
+                android:background="#FFFFFF" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -287,8 +238,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/redhatdisplaybold"
-                    android:text="Password:"
-                    android:textColor="@color/colorPrimary"
+                    android:text="Phone Number:"
+                    android:textColor="#FFFFFF"
                     android:textSize="18sp" />
 
                 <TextView
@@ -296,11 +247,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:textColor="#00FFF7"
                     android:fontFamily="@font/redhatdisplaybold"
                     android:gravity="end"
                     android:text="Change"
                     android:textAlignment="viewEnd"
-                    android:textSize="16dp" />
+                    android:textSize="16dp"
+                    android:visibility="visible"/>
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/editbox"
+                    android:fontFamily="@font/redhatdisplaybold"
+                    android:gravity="center_horizontal"
+                    android:hint="New Email"
+                    android:textAlignment="center"
+                    android:id="@+id/edit_phone_number"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    tools:visibility="gone" />
 
             </LinearLayout>
 
@@ -310,85 +276,7 @@
                 android:layout_height="1dp"
                 android:layout_margin="10dp"
                 android:alpha="0.5"
-                android:background="#0090ff" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/redhatdisplaybold"
-                    android:text="Password:"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/redhatdisplaybold"
-                    android:gravity="end"
-                    android:text="Change"
-                    android:textAlignment="viewEnd"
-                    android:textSize="16dp" />
-
-            </LinearLayout>
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/appCompatImageView"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_margin="10dp"
-                android:alpha="0.5"
-                android:background="#0090ff" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginRight="10dp">
-
-                <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textSize="18sp"
-                    android:textColor="@color/colorPrimary"
-                    android:text="Password:"
-                    android:fontFamily="@font/redhatdisplaybold"/>
-
-                <TextView
-                    android:id="@+id/textView12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textSize="16dp"
-                    android:textAlignment="viewEnd"
-                    android:fontFamily="@font/redhatdisplaybold"
-                    android:text="Change"
-                    android:gravity="end" />
-
-            </LinearLayout>
-           <androidx.appcompat.widget.AppCompatImageView
-               android:layout_width="match_parent"
-               android:layout_height="1dp"
-               android:alpha="0.5"
-               android:layout_margin="10dp"
-               android:background="#0090ff"/>
+                android:background="#FFFFFF" />
 
         </LinearLayout>
 
@@ -401,9 +289,9 @@
             android:layout_marginRight="40dp"
             android:layout_marginStart="40dp"
             android:layout_marginTop="7dp"
-            android:background="@drawable/round_gold_bg"
+            android:background="@drawable/contactmodifybtn"
             android:text="MODIFY"
-            android:textSize="17dp"
+            android:textSize="20dp"
             android:fontFamily="@font/redhatdisplaybold"
             android:textColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"

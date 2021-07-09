@@ -24,7 +24,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_homee);
         init();
         initAction();
     }
@@ -36,7 +36,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
         homeLLParentRead = findViewById(R.id.homeLLParentRead);
         homeLLParentRecord = findViewById(R.id.homeLLParentRecord);
         homeLLParentExplore = findViewById(R.id.homeLLParentExplore);
-        homeLLParentLearn = findViewById(R.id.homeLLParentLearn);
+      //  homeLLParentLearn = findViewById(R.id.homeLLParentLearn);
 
         homeParentName = findViewById(R.id.homeParentName);
     }
@@ -66,8 +66,8 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
                 intent = new Intent(Home.this, ResultsActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.homeLLParentLearn:
-                break;
+//            case R.id.homeLLParentLearn:
+           //     break;
             case R.id.homeLLChildRead:
                 intent = new Intent(Home.this, ResultsActivity.class);
                 startActivity(intent);
