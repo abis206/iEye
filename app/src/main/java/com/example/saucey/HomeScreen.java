@@ -24,14 +24,17 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
     TextView name;
     FirebaseAuth mAuth;
     private String UserID;
-    private com.google.android.material.floatingactionbutton.FloatingActionButton contacts;
+    private Button contacts;
+    private Button scan;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homee);
-        name = (TextView) findViewById(R.id.homeuser);
-        contacts =  findViewById(R.id.floatingActionButton3);
+        scan = findViewById(R.id.button2);
+        name = findViewById(R.id.homeuser);
+        contacts =  findViewById(R.id.button3);
         contacts.setOnClickListener(this);
+        scan.setOnClickListener(this);
         mAuth = FirebaseAuth.getInstance();
         String[] id = mAuth.getCurrentUser().getEmail().split("@");
         UserID = id[0];
@@ -76,8 +79,11 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.floatingActionButton3:
+            case R.id.button3:
                 startActivity(new Intent(HomeScreen.this,ContactListPage.class));
+                break;
+            case R.id.button2:
+                startActivity(new Intent(HomeScreen.this,DiagnosticsPage.class));
         }
     }
 }

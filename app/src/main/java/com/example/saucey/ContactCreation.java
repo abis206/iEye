@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.renderscript.Allocation;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -53,6 +54,12 @@ public class ContactCreation extends AppCompatActivity implements View.OnClickLi
         address = findViewById(R.id.llocation);
         create = findViewById(R.id.Login);
         profile = findViewById(R.id.imageView2);
+        Intent intent = getIntent();
+
+        if(intent.getStringArrayExtra("info") != null){
+            fullName.setText(intent.getStringArrayExtra("info")[0]);
+            address.setText(intent.getStringArrayExtra("info")[1]);
+        }
 
         profile.setOnClickListener(new View.OnClickListener() {
             @Override

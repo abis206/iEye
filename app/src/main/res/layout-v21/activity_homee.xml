@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:background="#00FFFCFF"
     >
 
     <com.scwang.wave.MultiWaveHeader
@@ -43,6 +44,18 @@
         app:layout_constraintTop_toBottomOf="@+id/header"
         app:layout_constraintVertical_bias="0.028" />
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="352dp"
+        android:layout_height="592dp"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintVertical_bias="0.571"
+        app:srcCompat="@drawable/clip_art" />
+
     <TextView
         android:id="@+id/homeuser"
         android:layout_width="wrap_content"
@@ -58,16 +71,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="253dp"
-        android:layout_height="452dp"
-        app:layout_constraintBottom_toTopOf="@+id/footer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header"
-        app:srcCompat="@drawable/clip_art" />
-
     <Button
         android:id="@+id/button2"
         android:layout_width="315dp"
@@ -81,7 +84,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header"
-        app:layout_constraintVertical_bias="0.803" />
+        app:layout_constraintVertical_bias="0.826" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="246dp"
+        android:layout_height="42dp"
+        android:background="@drawable/round_bg2"
+        android:fontFamily="@font/redhatdisplaybold"
+        android:text="Contact"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintVertical_bias="0.935" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton3"
@@ -90,6 +109,7 @@
         android:layout_marginBottom="21dp"
         android:backgroundTint="@color/purple"
         android:clickable="true"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/footer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.352"
@@ -103,6 +123,7 @@
         android:layout_marginBottom="21dp"
         android:backgroundTint="@color/purple"
         android:clickable="true"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/footer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.645"

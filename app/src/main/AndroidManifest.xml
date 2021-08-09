@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ContactCreation"></activity>
+        <activity android:name=".DiagnosticsPage"></activity>
+
+        <activity android:name=".NearbyLocations" />
+
+        <activity android:name=".ContactCreation" />
         <activity android:name=".ContactListPage" />
         <activity android:name=".HomeScreen" />
         <activity android:name=".Profile" />
@@ -23,8 +27,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key" />
     </application>
-
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
 </manifest>
